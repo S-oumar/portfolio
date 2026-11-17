@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oumar Ahmat Souleymane</title>
+<meta name="description" content="Oumar Ahmat Souleymane, ingénieur IA en construction. Étudiant en L3 Informatique à Lyon 1, à la recherche d'un stage de 3 mois dès mai 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#accueil">Oumar<span>.</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#projets">Projets</a>
+      <a href="#methode">Méthode</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#notes">Notes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" id="theme">Thème sombre</button>
+  </div>
+</header>
+
+<main>
+  <section id="accueil" class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">L3 Informatique · Université Claude Bernard Lyon 1</p>
+      <h1>Oumar Ahmat Souleymane</h1>
+      <p class="role">Ingénieur IA <strong>en construction</strong></p>
+      <p class="lead">Je construis des systèmes qui collectent, comprennent et optimisent des données réelles.</p>
+      <p class="badge"><span class="dot" aria-hidden="true"></span>Disponible pour un stage de 3 mois dès mai 2027 · Lyon et France</p>
+      <div class="actions">
+        <a class="btn primary" href="#projets">Voir mes projets</a>
+        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
+        <a class="btn" href="https://github.com/S-oumar" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/oumar-ahmat-souleymane" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1.5" fill="none">
+          <line x1="20" y1="40" x2="90" y2="20"/><line x1="90" y1="20" x2="170" y2="60"/>
+          <line x1="90" y1="20" x2="120" y2="100"/><line x1="170" y1="60" x2="120" y2="100"/>
+          <line x1="20" y1="40" x2="60" y2="120"/><line x1="60" y1="120" x2="120" y2="100"/>
+          <line x1="170" y1="60" x2="185" y2="150"/><line x1="120" y1="100" x2="185" y2="150"/>
+        </g>
+        <circle cx="20" cy="40" r="4"/><circle cx="90" cy="20" r="5"/><circle cx="170" cy="60" r="5"/>
+        <circle cx="120" cy="100" r="6"/><circle cx="60" cy="120" r="4"/><circle cx="185" cy="150" r="4"/>
+      </svg>
+      <img src="img/photo.jpg" alt="Portrait d'Oumar Ahmat Souleymane" width="480" height="480">
+    </figure>
+  </section>
+
+  <section id="direct" class="wrap" aria-labelledby="direct-titre">
+    <div class="live">
+      <div class="live-head">
+        <span class="pill" id="live-pill"><span class="dot" aria-hidden="true"></span><span id="live-state">Collecte automatique</span></span>
+        <h2 id="direct-titre">Pendant que vous lisez cette page, mon robot travaille.</h2>
+        <p>Toutes les 5 minutes, il photographie l'état des 459 stations Vélo'v de Lyon, sans intervention humaine. Les données s'ajoutent à un dépôt GitHub public.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Dernière photo</dt><dd id="last-shot"><a href="https://github.com/S-oumar/velo-v-lyon/tree/main/data" target="_blank" rel="noopener">voir les données</a></dd></div>
+        <div><dt>Stations suivies</dt><dd>459</dd></div>
+        <div><dt>Fréquence</dt><dd>5 min · 288 photos par jour</dd></div>
+        <div><dt>En service depuis</dt><dd>2026-11-03 19:10 UTC</dd></div>
+        <div><dt>Relevés récupérés</dt><dd>plus de 99 %</dd></div>
+      </dl>
+      <p class="csv" aria-label="En-tête des fichiers de données">timestamp_utc,station_id,mechanical_bikes_available,electric_bikes_available,bikes_out_of_service,docks_available,docks_out_of_service,can_rent,can_return,last_reported_utc</p>
+    </div>
+  </section>
+
+  <section id="projets" class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Projets</p>
+      <h2>Ce que j'ai construit</h2>
+    </header>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <h3>Vélo'v Lyon</h3>
+          <p class="case-sub">Prévoir les stations vides avant qu'elles le soient</p>
+        </div>
+        <ul class="tags"><li>Python</li><li>GitHub Actions</li><li>Données ouvertes</li><li>Projet personnel</li></ul>
+      </div>
+      <div class="case-grid">
+        <div>
+          <h4>Le problème</h4>
+          <p>À Lyon, des stations se vident le matin et débordent le soir. Les camions de régulation sont peu nombreux, et réagir quand une station est déjà vide, c'est trop tard.</p>
+        </div>
+        <div>
+          <h4>Ce que j'ai construit</h4>
+          <p>Un robot qui collecte l'état des 459 stations toutes les 5 minutes. Il est déclenché par l'API GitHub, réessaie en cas de panne et m'alerte en cas d'échec. Plus de 99 % des relevés sont récupérés depuis le 3 novembre 2026.</p>
+        </div>
+        <div class="wide">
+          <h4>La galère qui m'a le plus appris</h4>
+          <ul class="fixes">
+            <li><p class="broke">Le planificateur de GitHub ne donnait que 3 à 5 photos par jour au lieu de 288.</p><p class="fixed">J'ai confié le réveil à un service externe, qui appelle l'API GitHub toutes les 5 minutes.</p></li>
+            <li><p class="broke">Le serveur des données ne répondait pas toujours.</p><p class="fixed">Trois tentatives espacées de 10 secondes, puis une alerte visible plutôt qu'un échec silencieux.</p></li>
+            <li><p class="broke">Un simple renommage du dépôt a coupé la collecte pendant 30 minutes.</p><p class="fixed">J'ai mis à jour toutes les adresses qui contenaient l'ancien nom.</p></li>
+          </ul>
+          <p class="takeaway">Un système fiable ne se construit pas en une fois&nbsp;: on le casse, on comprend, on corrige, on documente.</p>
+        </div>
+        <div>
+          <h4>Ce que les données m'ont appris</h4>
+          <p>Le champ <code>last_reported</code> ne mesure pas la fraîcheur des données, contrairement à ce que son nom laisse croire. Je vérifie dans les données avant de croire un nom de champ.</p>
+        </div>
+        <div>
+          <h4>La suite</h4>
+          <p>Un modèle qui prévoit la disponibilité de chaque station à 1 heure, puis l'optimisation des tournées de camions.</p>
+        </div>
+      </div>
+      <a class="more" href="https://github.com/S-oumar/velo-v-lyon" target="_blank" rel="noopener">Le code et le journal de décisions sur GitHub</a>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <h3>Planification des camions d'un entrepôt</h3>
+          <p class="case-sub">Laisser un solveur trouver le meilleur planning</p>
+        </div>
+        <ul class="tags"><li>Python</li><li>OR-Tools · CP-SAT</li><li>Projet universitaire en cours</li></ul>
+      </div>
+      <div class="case-grid">
+        <div>
+          <h4>Le problème</h4>
+          <p>Des camions arrivent à un entrepôt, mais les quais et la file d'attente sont limités, et chaque camion a un rendez-vous.</p>
+        </div>
+        <div>
+          <h4>Ce que j'ai construit</h4>
+          <p>Un modèle en programmation par contraintes, en 6 versions successives, jusqu'à 16 points de livraison réels et la minimisation des retards.</p>
+        </div>
+        <div class="wide">
+          <h4>Le déclic</h4>
+          <p>On ne dit pas à l'ordinateur comment résoudre le problème. On décrit les règles et l'objectif, et le solveur trouve lui-même la meilleure solution. Ça a changé ma façon de voir la programmation.</p>
+        </div>
+      </div>
+      <a class="more" href="https://github.com/S-oumar/Optimisation-de-transport" target="_blank" rel="noopener">Le modèle sur GitHub</a>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <h3>Jeux de plateau avec IA</h3>
+          <p class="case-sub">Morpion, Puissance 4 et Nim, contre une IA difficile à battre</p>
+        </div>
+        <ul class="tags"><li>Java</li><li>UML · MVC</li><li>Équipe de 3</li></ul>
+      </div>
+      <p>Conçus en UML puis développés en 4 itérations&nbsp;: une architecture MVC de 16 classes et trois IA à deux niveaux (minimax, évaluation par score, stratégie gagnante du XOR). J'ai assuré la conception, tout le développement et la présentation de chaque itération. Ci-dessous, la stratégie de l'IA du Nim, réécrite en JavaScript.</p>
+      <div class="nim" id="nim">
+        <div class="nim-top">
+          <strong>Essayez de battre mon IA de Nim</strong>
+          <span class="muted">Celui qui prend la dernière allumette gagne.</span>
+        </div>
+        <div class="piles" id="piles"></div>
+        <p class="nim-status" id="nim-status" aria-live="polite">À vous de commencer. Cliquez sur une allumette&nbsp;: elle et toutes celles à sa droite sont retirées du tas.</p>
+        <div class="nim-actions">
+          <button class="btn" type="button" id="nim-reset">Nouvelle partie</button>
+          <button class="btn" type="button" id="nim-why" aria-expanded="false" aria-controls="nim-xor">Voir le calcul de l'IA</button>
+        </div>
+        <div class="xor" id="nim-xor" hidden>
+          <table><tbody id="xor-body"></tbody></table>
+          <p class="muted" id="xor-text"></p>
+        </div>
+      </div>
+      <a class="more" href="https://github.com/S-oumar/jeux-de-plateau-ia" target="_blank" rel="noopener">Le code Java sur GitHub</a>
+    </article>
+
+    <div class="cards">
+      <article class="card">
+        <p class="meta">Python · équipe de 5</p>
+        <h3>Compilateur Jack</h3>
+        <p>Une chaîne de compilation complète, du langage objet Jack jusqu'à l'assembleur d'un ordinateur construit de zéro (Nand2Tetris), démontrée par un jeu, StickHero. J'ai écrit le générateur de code du compilateur et contribué au traducteur VM et à ses tests.</p>
+        <a class="more" href="https://github.com/S-oumar/compilateur-jack" target="_blank" rel="noopener">Voir le dépôt</a>
+      </article>
+      <article class="card">
+        <p class="meta">Java · projet de L3 · <span class="chip build">En cours</span></p>
+        <h3>Shapez</h3>
+        <p>Un jeu d'usine en Java, inspiré de Shapez, pour apprendre les threads et l'interface graphique. Fiche détaillée à venir.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="methode" class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Méthode</p>
+      <h2>Comment je travaille</h2>
+      <p class="intro">Des habitudes d'ingénieur, chacune vérifiable dans mes dépôts.</p>
+    </header>
+    <ul class="principles">
+      <li><strong>Je documente mes décisions.</strong><span>Chaque choix de Vélo'v est noté avec les options écartées et la raison&nbsp;: 8 décisions à ce jour, que je peux défendre une par une.</span></li>
+      <li><strong>J'automatise ce qui se répète.</strong><span>Un robot GitHub Actions collecte mes données, et ce site se met en ligne tout seul à chaque <code>git push</code>.</span></li>
+      <li><strong>Je préfère un échec visible à un échec silencieux.</strong><span>Quand ma collecte échoue après 3 tentatives, elle le signale, au lieu de faire semblant d'avoir réussi.</span></li>
+      <li><strong>Je vérifie avant de croire.</strong><span>Les données ont souvent raison contre les noms de champs, et les tests contre l'intuition.</span></li>
+      <li><strong>J'écris mes limites.</strong><span>Chaque README a une section «&nbsp;Limites connues&nbsp;». Savoir ce qui ne marche pas fait partie du travail.</span></li>
+      <li><strong>J'avance par petites versions.</strong><span>Les jeux de plateau en 4 itérations, la planification des camions en 6 versions successives&nbsp;: chaque étape marche avant de passer à la suivante.</span></li>
+    </ul>
+  </section>
+
+  <section id="competences" class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Compétences</p>
+      <h2>Ce que je maîtrise, ce que je construis</h2>
+      <p class="intro">«&nbsp;Je maîtrise&nbsp;» veut dire&nbsp;: je m'en suis servi seul sur un vrai projet, et je peux expliquer mes choix. Chaque ligne donne sa preuve.</p>
+    </header>
+    <div class="table-box">
+      <table class="skills">
+        <thead><tr><th scope="col">Compétence</th><th scope="col">Niveau</th><th scope="col">Où je l'ai prouvée</th></tr></thead>
+        <tbody>
+          <tr><td>Python</td><td><span class="chip master">Je maîtrise</span></td><td>Vélo'v (requests, csv, pathlib, datetime, gestion des erreurs), planification (OR-Tools), compilateur Jack</td></tr>
+          <tr><td>Java&nbsp;: POO, UML, MVC</td><td><span class="chip master">Je maîtrise</span></td><td>Jeux de plateau&nbsp;: 16 classes, héritage, exceptions</td></tr>
+          <tr><td>OCaml&nbsp;: programmation fonctionnelle</td><td><span class="chip master">Je maîtrise</span></td><td>Premier de la promotion en L2 à Orléans, automates en langages formels (L3)</td></tr>
+          <tr><td>SQL</td><td><span class="chip master">Je maîtrise</span></td><td>UE Bases de données avancées</td></tr>
+          <tr><td>Git, GitHub Actions</td><td><span class="chip master">Je maîtrise</span></td><td>Le robot Vélo'v, 4 dépôts publics</td></tr>
+          <tr><td>Programmation par contraintes</td><td><span class="chip master">Je maîtrise</span></td><td>Planification des camions (CP-SAT)</td></tr>
+          <tr><td>Algorithmique et graphes</td><td><span class="chip master">Je maîtrise</span></td><td>Minimax, stratégie du XOR, cours de L2</td></tr>
+          <tr><td>HTML</td><td><span class="chip master">Je maîtrise</span></td><td>Ce site</td></tr>
+          <tr><td>Java&nbsp;: threads, interface graphique</td><td><span class="chip build">Je construis</span></td><td>Shapez, en cours</td></tr>
+          <tr><td>Machine learning</td><td><span class="chip build">Je construis</span></td><td>La prédiction de Vélo'v</td></tr>
+          <tr><td>CSS, JavaScript</td><td><span class="chip build">Je construis</span></td><td>Ce site</td></tr>
+          <tr><td>C++</td><td><span class="chip build">Je construis</span></td><td>Exercices (POO, STL)</td></tr>
+          <tr><td>Docker</td><td><span class="chip build">Je construis</span></td><td>TP</td></tr>
+          <tr><td>Assembleur Hack, langage VM</td><td><span class="chip seen">Vu en projet</span></td><td>Compilateur Jack</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="langs">Langues&nbsp;: arabe et français (bilingue), anglais (B1+, objectif B2).</p>
+  </section>
+
+  <section id="parcours" class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Parcours</p>
+      <h2>De N'Djamena à Lyon</h2>
+    </header>
+    <p class="quote">J'ai appris à collecter des données sur le terrain avant de les collecter avec du code.</p>
+    <ol class="timeline">
+      <li><span class="when">2022</span><div class="what"><strong>Baccalauréat général, mention Bien</strong><span>Lycée Les Faucons, N'Djamena (Tchad).</span></div></li>
+      <li><span class="when">2022 – 2023</span><div class="what"><strong>Bénévole sur une mission de recensement des éleveurs</strong><span>Dans plusieurs provinces du Tchad&nbsp;: expliquer la démarche, recueillir le nombre et le type d'animaux, conseiller les éleveurs.</span></div></li>
+      <li><span class="when">2023 – 2024</span><div class="what"><strong>Arrivée en France et réorientation</strong><span>Un semestre de biologie pour faire médecine, puis le choix de l'informatique. Je finance mes études en travaillant&nbsp;: Aux Ateliers à Besançon, puis Bonduelle à Lyon.</span></div></li>
+      <li><span class="when">2024 – 2026</span><div class="what"><strong>L1 et L2 Informatique, Université d'Orléans</strong><span>Premier de la promotion en programmation fonctionnelle (OCaml). Les jeux avec IA, le compilateur Jack. Les étés chez Intermarché.</span></div></li>
+      <li><span class="when">Depuis 2026</span><div class="what"><strong>L3 Informatique, Université Claude Bernard Lyon 1</strong><span>Préparateur de commandes chez Amazon le week-end. Lancement de Vélo'v.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="notes" class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Notes</p>
+      <h2>Ce que j'écris</h2>
+    </header>
+    <article class="note">
+      <span class="chip build">En cours d'écriture</span>
+      <h3>Rejetés en 1969, partout aujourd'hui&nbsp;: la revanche des réseaux de neurones</h3>
+      <p>Le XOR, l'opération qu'utilise mon IA de Nim pour gagner à coup sûr, est aussi le problème qui a fait douter du perceptron en 1969, quand Minsky et Papert ont montré qu'un réseau à une seule couche ne peut pas le calculer. Des décennies plus tard, les réseaux de neurones sont au cœur des LLM. Cet article raconte ce retournement.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="wrap contact">
+    <p class="eyebrow">Contact</p>
+    <h2>Un stage, un projet, une question technique&nbsp;?</h2>
+    <p class="intro">Écrivez-moi, je réponds rapidement.</p>
+    <div class="mail">
+      <code id="mail">oumar.souleymane.tech@gmail.com</code>
+      <button class="btn" type="button" id="copy-mail">Copier l'adresse</button>
+    </div>
+    <div class="links">
+      <a class="btn" href="https://www.linkedin.com/in/oumar-ahmat-souleymane" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/S-oumar" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Écrit à la main en HTML, CSS et JavaScript. Chaque <code>git push</code> le met en ligne grâce à GitHub Actions.</span>
+    <span>© 2026 Oumar Ahmat Souleymane</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

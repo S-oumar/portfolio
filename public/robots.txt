@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oumar-souleymane.web.app/sitemap.xml

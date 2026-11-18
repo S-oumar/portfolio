@@ -197,21 +197,35 @@
         </div>
         <ul class="tags"><li>Java</li><li>UML · MVC</li><li>Équipe de 3</li></ul>
       </div>
-      <p>Conçus en UML puis développés en 4 itérations&nbsp;: une architecture MVC de 16 classes et trois IA à deux niveaux (minimax, évaluation par score, stratégie gagnante du XOR). J'ai assuré la conception, tout le développement et la présentation de chaque itération. Ci-dessous, la stratégie de l'IA du Nim, réécrite en JavaScript.</p>
-      <div class="nim" id="nim">
-        <div class="nim-top">
-          <strong>Essayez de battre mon IA de Nim</strong>
-          <span class="muted">Celui qui prend la dernière allumette gagne.</span>
+      <p>Conçus en UML puis développés en 4 itérations&nbsp;: une architecture MVC de 16 classes et trois IA à deux niveaux (minimax, évaluation par score, stratégie gagnante du XOR). J'ai assuré la conception, tout le développement et la présentation de chaque itération. Ci-dessous, les trois IA réécrites en JavaScript&nbsp;: choisissez un jeu et essayez de les battre.</p>
+      <div class="arcade" id="arcade">
+        <div class="arcade-top">
+          <div class="tabs" role="tablist" aria-label="Choisir un jeu">
+            <button type="button" role="tab" id="tab-ttt" data-game="ttt" aria-controls="game-ttt" aria-selected="true">Morpion</button>
+            <button type="button" role="tab" id="tab-c4" data-game="c4" aria-controls="game-c4" aria-selected="false" tabindex="-1">Puissance 4</button>
+            <button type="button" role="tab" id="tab-nim" data-game="nim" aria-controls="game-nim" aria-selected="false" tabindex="-1">Nim</button>
+          </div>
+          <div class="level" role="group" aria-label="Niveau de l'IA">
+            <button type="button" data-level="easy" aria-pressed="false">Facile</button>
+            <button type="button" data-level="hard" aria-pressed="true">Difficile</button>
+          </div>
         </div>
-        <div class="piles" id="piles"></div>
-        <p class="nim-status" id="nim-status" aria-live="polite">À vous de commencer. Cliquez sur une allumette&nbsp;: elle et toutes celles à sa droite sont retirées du tas.</p>
-        <div class="nim-actions">
-          <button class="btn" type="button" id="nim-reset">Nouvelle partie</button>
-          <button class="btn" type="button" id="nim-why" aria-expanded="false" aria-controls="nim-xor">Voir le calcul de l'IA</button>
+        <div class="arcade-head">
+          <strong>Jouez contre mes IA</strong>
+          <span class="muted" id="game-rule"></span>
         </div>
-        <div class="xor" id="nim-xor" hidden>
-          <table><tbody id="xor-body"></tbody></table>
-          <p class="muted" id="xor-text"></p>
+        <div class="board" id="game-ttt" role="tabpanel" aria-labelledby="tab-ttt"><div class="ttt" id="ttt"></div></div>
+        <div class="board" id="game-c4" role="tabpanel" aria-labelledby="tab-c4" hidden><div class="c4" id="c4"></div></div>
+        <div class="board" id="game-nim" role="tabpanel" aria-labelledby="tab-nim" hidden><div class="piles" id="piles"></div></div>
+        <p class="game-status" id="game-status" aria-live="polite"></p>
+        <div class="game-actions">
+          <button class="btn primary" type="button" id="game-reset">Nouvelle partie</button>
+          <button class="btn" type="button" id="game-why" aria-expanded="false" aria-controls="game-why-box">Comment l'IA réfléchit</button>
+          <span class="game-score" id="game-score"></span>
+        </div>
+        <div class="why" id="game-why-box" hidden>
+          <p id="why-text"></p>
+          <div class="xor" id="nim-xor"><table><tbody id="xor-body"></tbody></table></div>
         </div>
       </div>
       <a class="more" href="https://github.com/S-oumar/jeux-de-plateau-ia" target="_blank" rel="noopener">Le code Java sur GitHub</a>
@@ -226,8 +240,9 @@
       </article>
       <article class="card">
         <p class="meta">Java · projet de L3 · <span class="chip build">En cours</span></p>
-        <h3>Shapez</h3>
-        <p>Un jeu d'usine en Java, inspiré de Shapez, pour apprendre les threads et l'interface graphique. Fiche détaillée à venir.</p>
+        <h3>ShapeCraft</h3>
+        <p>Un jeu d'usine en Java inspiré de shapez.io&nbsp;: on pose des machines sur une grille, et les objets circulent de machine en machine. Architecture MVC, et un thread de jeu qui fait tourner l'usine chaque seconde pendant que les clics modifient la grille.</p>
+        <a class="more" href="https://github.com/S-oumar/ShapeCraft" target="_blank" rel="noopener">Voir le dépôt</a>
       </article>
     </div>
   </section>
@@ -260,13 +275,13 @@
         <tbody>
           <tr><td>Python</td><td><span class="chip master">Je maîtrise</span></td><td>Vélo'v (requests, csv, pathlib, datetime, gestion des erreurs), planification (OR-Tools), compilateur Jack</td></tr>
           <tr><td>Java&nbsp;: POO, UML, MVC</td><td><span class="chip master">Je maîtrise</span></td><td>Jeux de plateau&nbsp;: 16 classes, héritage, exceptions</td></tr>
-          <tr><td>OCaml&nbsp;: programmation fonctionnelle</td><td><span class="chip master">Je maîtrise</span></td><td>Premier de la promotion en L2 à Orléans, automates en langages formels (L3)</td></tr>
+          <tr><td>OCaml&nbsp;: programmation fonctionnelle</td><td><span class="chip master">Je maîtrise</span></td><td>Récursivité et filtrage par motif en L2 à Orléans, automates en langages formels (L3)</td></tr>
           <tr><td>SQL</td><td><span class="chip master">Je maîtrise</span></td><td>UE Bases de données avancées</td></tr>
           <tr><td>Git, GitHub Actions</td><td><span class="chip master">Je maîtrise</span></td><td>Le robot Vélo'v, 4 dépôts publics</td></tr>
           <tr><td>Programmation par contraintes</td><td><span class="chip master">Je maîtrise</span></td><td>Planification des camions (CP-SAT)</td></tr>
           <tr><td>Algorithmique et graphes</td><td><span class="chip master">Je maîtrise</span></td><td>Minimax, stratégie du XOR, cours de L2</td></tr>
           <tr><td>HTML</td><td><span class="chip master">Je maîtrise</span></td><td>Ce site</td></tr>
-          <tr><td>Java&nbsp;: threads, interface graphique</td><td><span class="chip build">Je construis</span></td><td>Shapez, en cours</td></tr>
+          <tr><td>Java&nbsp;: threads, interface graphique</td><td><span class="chip build">Je construis</span></td><td>ShapeCraft, en cours</td></tr>
           <tr><td>Machine learning</td><td><span class="chip build">Je construis</span></td><td>La prédiction de Vélo'v</td></tr>
           <tr><td>CSS, JavaScript</td><td><span class="chip build">Je construis</span></td><td>Ce site</td></tr>
           <tr><td>C++</td><td><span class="chip build">Je construis</span></td><td>Exercices (POO, STL)</td></tr>
@@ -288,7 +303,7 @@
       <li><span class="when">2022</span><div class="what"><strong>Baccalauréat général, mention Bien</strong><span>Lycée Les Faucons, N'Djamena (Tchad).</span></div></li>
       <li><span class="when">2022 – 2023</span><div class="what"><strong>Bénévole sur une mission de recensement des éleveurs</strong><span>Dans plusieurs provinces du Tchad&nbsp;: expliquer la démarche, recueillir le nombre et le type d'animaux, conseiller les éleveurs.</span></div></li>
       <li><span class="when">2023 – 2024</span><div class="what"><strong>Arrivée en France et réorientation</strong><span>Un semestre de biologie pour faire médecine, puis le choix de l'informatique. Je finance mes études en travaillant&nbsp;: Aux Ateliers à Besançon, puis Bonduelle à Lyon.</span></div></li>
-      <li><span class="when">2024 – 2026</span><div class="what"><strong>L1 et L2 Informatique, Université d'Orléans</strong><span>Premier de la promotion en programmation fonctionnelle (OCaml). Les jeux avec IA, le compilateur Jack. Les étés chez Intermarché.</span></div></li>
+      <li><span class="when">2024 – 2026</span><div class="what"><strong>L1 et L2 Informatique, Université d'Orléans</strong><span>La programmation fonctionnelle en OCaml, les jeux avec IA, le compilateur Jack. Les étés chez Intermarché.</span></div></li>
       <li><span class="when">Depuis 2026</span><div class="what"><strong>L3 Informatique, Université Claude Bernard Lyon 1</strong><span>Préparateur de commandes chez Amazon le week-end. Lancement de Vélo'v.</span></div></li>
     </ol>
   </section>

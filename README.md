@@ -8,7 +8,7 @@ Le site personnel d'**Oumar Ahmat SOULEYMANE**, étudiant en L3 Informatique à 
 | --- | --- |
 | `public/index.html` | Le contenu de la page |
 | `public/css/style.css` | L'apparence : couleurs, polices, mise en page, thème clair et sombre |
-| `public/js/main.js` | Les parties interactives : statut en direct du robot Vélo'v, jeu de Nim, thème, copie de l'e-mail |
+| `public/js/main.js` | Les parties interactives : statut en direct du robot Vélo'v, trois jeux contre mes IA (Morpion, Puissance 4, Nim), thème, copie de l'e-mail |
 | `public/img/` | La photo et l'icône de l'onglet |
 | `public/cv.pdf` | Mon CV |
 
